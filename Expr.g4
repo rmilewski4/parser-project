@@ -1,6 +1,11 @@
 grammar Expr;
-start_ : expr (';' expr)* EOF;
-expr : atom | ('+' | '-') expr | expr '**' expr | expr ('*' | '/') expr | expr ('+' | '-') expr | '(' expr ')' | atom ;
-atom : INT ;
-INT : [0-9]+ ;
+start_ : expr ('\n' | expr)* EOF;
+expr : assignment ;
+arethmetic :(char)* ('+' | '-' | '/' | '*' | '%') char (arethmetic)*;
+assignment : char '=' char | char '+=' char | char '-=' char | char '*=' char | char '/=' char | char '=' arethmetic | char '=' array;
+array : '['(arrchars)*']';
+arrchars : char',' | char;
+char : NUMS | VALIDWORDS;
+NUMS : [0-9.]+ ;
+VALIDWORDS : [A-Za-z"._'0-9]+;
 WS : [ \t\n\r]+ -> skip ;
