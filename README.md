@@ -20,6 +20,6 @@ FS23 PoPL Parser Project
 ## Instructions
 
 1. To setup, clone this repo and ensure all requirements (above) are met.
-2. Execute `sudo chmod +x ./build.sh ./run.sh` in the root directory to make the build and run scripts executable.
+2. Execute `sudo chmod +x ./clean.sh ./build.sh ./run.sh` in the root directory to make the clean, build and run scripts executable.
 3. Run `./build.sh` in the root directory to generate the ANTLR files needed to run the driver script.
 4. Run `./run.sh` in the root directory to run the driver script.
