@@ -1,2 +1,7 @@
 *.tokens
+*.interp
 *.pyc
+__pycache__/*
+ExprLexer.py
+ExprParser.py
+ExprListener.py
