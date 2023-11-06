@@ -1,2 +1,2 @@
 # Script to run and test the project
-python3 Driver.py input.txt
+python3 Driver.py tests/deliverable_1_testcases.txt
