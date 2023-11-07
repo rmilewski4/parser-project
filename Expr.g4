@@ -9,7 +9,7 @@ if_else_block: 'if' condition_statement ':';
 condition: var ('==' | '!=' | '<' | '<=' | '>' | '>=') var;
 condition_statement: condition ('and' condition | 'or' condition)*;
 var: char | array | string;
-string: '"' (~'"')* '"';
+string: char (char)*;
 char : NUMS | VALIDWORDS;
 NUMS : [0-9.]+ ;
 VALIDWORDS : [A-Za-z"._'0-9]+;
