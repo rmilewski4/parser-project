@@ -15,6 +15,7 @@ FS23 PoPL Parser Project
 
 -   Unix-based CLI (Linux, MacOS, etc.)
 -   Python 3.X.X
+-   Pip X.X.X
 -   ANTLR 4.13.1
 
 ## Instructions
