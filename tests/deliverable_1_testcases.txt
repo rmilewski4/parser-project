@@ -24,3 +24,9 @@ var3 = var2 % 2
 var4 = 1
 
 flag = True
+
+assign1 = ""
+
+if var1 > var2:
+    arith_op1 = 1 + 2
+    assign1 = "text data"

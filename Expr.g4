@@ -1,10 +1,15 @@
 grammar Expr;
 start_ : expr ('\n' | expr)* EOF;
-expr : assignment ;
+expr : assignment | if_else_block;
 arethmetic :(char)* ('+' | '-' | '/' | '*' | '%') char (arethmetic)*;
-assignment : char '=' char | char '+=' char | char '-=' char | char '*=' char | char '/=' char | char '=' arethmetic | char '=' array;
+assignment : char '=' char | char '+=' char | char '-=' char | char '*=' char | char '/=' char | char '=' arethmetic | char '=' array | char '=' string;
 array : '['(arrchars)*']';
 arrchars : char',' | char;
+if_else_block: 'if' condition_statement ':';
+condition: var ('==' | '!=' | '<' | '<=' | '>' | '>=') var;
+condition_statement: condition ('and' condition | 'or' condition)*;
+var: char | array | string;
+string: '"' (~'"')* '"';
 char : NUMS | VALIDWORDS;
 NUMS : [0-9.]+ ;
 VALIDWORDS : [A-Za-z"._'0-9]+;
