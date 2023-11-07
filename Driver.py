@@ -13,6 +13,7 @@ def main(argv):
     tree = parser.start_()
     if parser.getNumberOfSyntaxErrors() > 0:
         print()
+        print(tree.toStringTree(recog=parser))  # Print tree to CLI
         print("failed!")
     else:
         print("passed!")
