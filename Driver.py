@@ -11,9 +11,11 @@ def main(argv):
     stream = CommonTokenStream(lexer)
     parser = ExprParser(stream)
     tree = parser.start_()
+    print(tree.toStringTree(recog=parser))  # Print tree to CLI
+    print()
+
+    # Check for syntax errors
     if parser.getNumberOfSyntaxErrors() > 0:
-        print()
-        print(tree.toStringTree(recog=parser))  # Print tree to CLI
         print("failed!")
     else:
         print("passed!")
