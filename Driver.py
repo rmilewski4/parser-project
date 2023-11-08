@@ -3,7 +3,6 @@ from io import StringIO
 from antlr4 import *
 from ExprLexer import ExprLexer
 from ExprParser import ExprParser
-from antlr4.tree.Trees import Trees
 
 
 def main(argv):
@@ -19,10 +18,6 @@ def main(argv):
     if parser.getNumberOfSyntaxErrors() > 0:
         print("failed!")
     else:
-        print(tree.toStringTree(recog=parser))  # Print tree to CLI
-        # Also show tree in GUI
-        print(tree.inspect())
-
         print("passed!")
 
 
