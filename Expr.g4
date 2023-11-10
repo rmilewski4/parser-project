@@ -16,7 +16,7 @@ condition_statement: condition (space 'and' space condition | space 'or' space c
 var: char | array | string;
 string: char (space char)*;
 char : NUMS | VALIDWORDS;
-NUMS : [0-9.]+ ;
+NUMS : ('-'|)[0-9.]+ ;
 VALIDWORDS : [A-Za-z"._'0-9]+;
 WS : [\r]+ -> skip ;
 tab : ('    ')+;
