@@ -1,6 +1,8 @@
 grammar Expr;
 start_ : expr ('\n' | expr)* EOF;
 expr : assignment | if_else_block;
+COMMENT: '#' ~[\r\n]* -> skip ;
+BLOCK_COMMENT : ('\'\'\'' .*? '\'\'\'' | '"""' .*? '"""') -> skip ;
 arethmetic :(char)* space ('+' | '-' | '/' | '*' | '%') space char (arethmetic)*;
 assignment : char space '=' space char | char space '+=' space char | char space '-=' space char | char space '*=' space char | char space '/=' space char | char space '=' space arethmetic | char space '=' space array | char space '=' space string;
 array : '['(arrchars)*']';
