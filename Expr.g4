@@ -1,5 +1,5 @@
 grammar Expr;
-start_ : expr ('\n' | expr | ('\t')+'\n')* EOF;
+start_ : expr ('\n' | expr | tab '\n')* EOF;
 expr : assignment | if_else_block;
 arethmetic :(char)* space ('+' | '-' | '/' | '*' | '%') space char (arethmetic)*;
 assignment : char space '=' space char | char space '+=' space char | char space '-=' space char | char space '*=' space char | char space '/=' space char | char space '=' space arethmetic | char space '=' space array | char space '=' space string;

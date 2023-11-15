@@ -37,7 +37,7 @@ if var1 <= var2 and var3 == var4:
 else:
     arith_op4 = 4.2 * 10
     arith_op3 *= arith_op4
-
+    
 data = 0
 
 if var1 != var2 or var3 >= var4:
