@@ -16,10 +16,10 @@ condition_statement: condition (space 'and' space condition | space 'or' space c
 var: char | array | string;
 string: char (space char)*;
 char : NUMS | VALIDWORDS;
+tab : ('    ')+;
+space : ' ' | ;
 NUMS : ('-'|)[0-9.]+ ;
 VALIDWORDS : [A-Za-z"._'0-9]+;
 WS : [\r]+ -> skip ;
 COMMENT: '#' ~[\r\n]* -> skip ;
 BLOCK_COMMENT : ('\'\'\'' .*? '\'\'\'' | '"""' .*? '"""') -> skip ;
-tab : ('    ')+;
-space : ' ' | ;
