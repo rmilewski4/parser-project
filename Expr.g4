@@ -1,5 +1,5 @@
 grammar Expr;
-start_ : expr ('\n' | expr)* EOF;
+start_ : expr ('\n' | expr | ('\t')+'\n')* EOF;
 expr : assignment | if_else_block;
 arethmetic :(char)* space ('+' | '-' | '/' | '*' | '%') space char (arethmetic)*;
 assignment : char space '=' space char | char space '+=' space char | char space '-=' space char | char space '*=' space char | char space '/=' space char | char space '=' space arethmetic | char space '=' space array | char space '=' space string;
@@ -16,7 +16,7 @@ condition_statement: condition (space 'and' space condition | space 'or' space c
 var: char | array | string;
 string: char (space char)*;
 char : NUMS | VALIDWORDS;
-tab : ('    ')+;
+tab : ('    ')+ | ('\t')+ ;
 space : ' ' | ;
 NUMS : ('-'|)[0-9.]+ ;
 VALIDWORDS : [A-Za-z"._'0-9]+;
