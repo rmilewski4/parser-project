@@ -1,6 +1,6 @@
 grammar Expr;
 start_ : expr ('\n' | expr | tab '\n')* EOF;
-expr : assignment | if_else_block;
+expr : assignment | if_else_block | while_loop | for_loop;
 arethmetic :(char)* space ('+' | '-' | '/' | '*' | '%') space char (arethmetic)*;
 assignment : char space '=' space char | char space '+=' space char | char space '-=' space char | char space '*=' space char | char space '/=' space char | char space '=' space arethmetic | char space '=' space array | char space '=' space string;
 array : '['(arrchars)*']';
@@ -16,10 +16,15 @@ condition_statement: condition (space 'and' space condition | space 'or' space c
 var: char | array | string;
 string: char (space char)*;
 char : NUMS | VALIDWORDS;
-tab : ('    ')+ | ('\t')+ ;
-space : ' ' | ;
 NUMS : ('-'|)[0-9.]+ ;
 VALIDWORDS : [A-Za-z"._'0-9]+;
 WS : [\r]+ -> skip ;
+tab : ('    ')+ | ('\t')+ ;
+space : ' ' |;
+while_loop: 'while' space condition_statement ':' ('\n' tab expr)+;
+for_loop: 'for' space var space 'in' space iterable ':' ('\n' tab expr)+;
+iterable: var | range_expr | array | string;
+range_expr: 'range' '(' range_params ')';
+range_params: char (',' char)*;
 COMMENT: '#' ~[\r\n]* -> skip ;
 BLOCK_COMMENT : ('\'\'\'' .*? '\'\'\'' | '"""' .*? '"""') -> skip ;
