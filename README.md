@@ -1,6 +1,10 @@
 # parser-project
 
-FS23 PoPL Parser Project
+FS23 PoPL Parser Project _(Parsing the Red Sea)_
+
+## About
+
+This project is a custom-built parser for Python3. It is built using our grammars, which are then read by ANTLR to generate the parser and lexer. Our program then takes in a Python3 file and parses it, outputting the parse tree to both a CLI and GUI, as well as whether the file is syntactically correct or not (with a list of errors if not).
 
 ## Authors
 
@@ -24,3 +28,7 @@ FS23 PoPL Parser Project
 2. Execute `sudo chmod +x ./clean.sh ./build.sh ./run.sh` in the root directory to make the clean, build and run scripts executable.
 3. Run `./build.sh` in the root directory to generate the ANTLR files needed to run the driver script.
 4. Run `./run.sh` in the root directory to run the driver script.
+
+## Video Demo
+
+[![Video Demo - Parsing the Red Sea](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
