@@ -24,3 +24,4 @@ FS23 PoPL Parser Project
 2. Execute `sudo chmod +x ./clean.sh ./build.sh ./run.sh` in the root directory to make the clean, build and run scripts executable.
 3. Run `./build.sh` in the root directory to generate the ANTLR files needed to run the driver script.
 4. Run `./run.sh` in the root directory to run the driver script.
+5. Done!
