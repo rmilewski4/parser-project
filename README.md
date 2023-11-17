@@ -31,4 +31,4 @@ This project is a custom-built parser for Python3. It is built using our grammar
 
 ## Video Demo
 
-[![Video Demo - Parsing the Red Sea](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+[![Video Demo - Parsing the Red Sea](https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
